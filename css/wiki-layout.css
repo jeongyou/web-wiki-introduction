@@ -57,8 +57,8 @@ h4 {
   margin-bottom: var(--page-subtitle-margin-y);
 }
 
-section > p,
-article > p {
+section>p,
+article>p {
   line-height: 24px;
   text-indent: 8px;
 }
@@ -98,7 +98,7 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("../images/profile.jpg");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
@@ -108,6 +108,10 @@ aside h2 {
 }
 
 aside.right-sidebar nav {
+  padding: var(--right-sidebar-padding);
+  position: sticky;
+  top: 20px;
+  background-color: var(--aside-bg-color);
   padding: var(--right-sidebar-padding);
 }
 
@@ -151,4 +155,109 @@ footer p {
 
   --divider-color: #efefef;
   --font-default-color: #333;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+
+.song-article {
+  margin-top: var(--page-subtitle-margin-y);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.comment-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 0 0 10px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+}
+
+.comment-icon {
+  width: 32px;
+  height: 32px;
+}
+
+#comment-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 10px;
+  outline: none;
+}
+
+.comment-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.comment-buttons button {
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background-color: #D8D8D8;
+  font-weight: bold;
+}
+
+button[type="button"] {
+  background-color: #D7F9F6;
+  font-weight: bold;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.comment-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.comment-author img {
+  width: 32px;
+  height: 32px;
+}
+
+.comment-content {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
 }
