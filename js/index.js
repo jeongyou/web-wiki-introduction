@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 댓글 리스트에 추가
       commentList.appendChild(newComment);
-
+      alert("댓글이 등록되었습니다.")
       // 입력창 초기화
       commentInput.value = "";
     }
